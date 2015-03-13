@@ -91,7 +91,7 @@ You can set params by `key=value` or `key:=value` syntax.
 The `slice` executable also accepts params via STDIN.
 
 ```
-$ slice list_items page=2 per_page=10
+$ slice list_items limit=3 offset=10
 $ slice create_item < params.json
 ```
 
