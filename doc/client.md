@@ -31,7 +31,7 @@ Sends PATCH request with given parameters, then returns a Slice::Response.
 `params` are JSON-encoded and used as request body.
 
 ```rb
-client.patch("/api/v1/items/543efd13001e30837319", title: "...", body: "...")
+client.patch("/api/v1/items/123", title: "...", body: "...")
 ```
 
 ### Slice::Client#put(path, params = nil, headers = nil)
@@ -39,7 +39,7 @@ Sends PUT request, then returns a Slice::Response.
 `params` are JSON-encoded and used as request body.
 
 ```rb
-client.put("/api/v1/items/543efd13001e30837319/stock")
+client.put("/api/v1/items/123")
 ```
 
 ### Slice::Client#delete(path, params = nil, headers = nil)
@@ -47,7 +47,7 @@ Sends DELETE request, then returns a Slice::Response.
 `params` are url-encoded and used as URI query string.
 
 ```rb
-client.delete("/api/v1/items/543efd13001e30837319/stock")
+client.delete("/api/v1/items/123")
 ```
 
 ### Slice::Client#connection
@@ -75,13 +75,13 @@ List orders
 ### Slice::Client#create_order(params = nil, headers = nil)
 Create a new order
 
-### Slice::Client#get_order(params = nil, headers = nil)
+### Slice::Client#get_order(id, params = nil, headers = nil)
 Get a particular order
 
-### Slice::Client#update_order(params = nil, headers = nil)
+### Slice::Client#update_order(id, params = nil, headers = nil)
 Update a particular order
 
-### Slice::Client#delete_order(params = nil, headers = nil)
+### Slice::Client#delete_order(id, params = nil, headers = nil)
 Delete a particular order
 
 ## 'Items' Resources
@@ -91,13 +91,13 @@ List items
 ### Slice::Client#create_item(params = nil, headers = nil)
 Create a new item
 
-### Slice::Client#get_item(params = nil, headers = nil)
+### Slice::Client#get_item(id, params = nil, headers = nil)
 Get a particular item
 
-### Slice::Client#update_item(params = nil, headers = nil)
+### Slice::Client#update_item(id, params = nil, headers = nil)
 Update a particular item
 
-### Slice::Client#delete_item(params = nil, headers = nil)
+### Slice::Client#delete_item(id, params = nil, headers = nil)
 Delete a particular item
 
 ## 'Shipments' Resources
@@ -107,32 +107,32 @@ List shipments
 ### Slice::Client#create_shipment(params = nil, headers = nil)
 Create a new shipment
 
-### Slice::Client#get_shipment(params = nil, headers = nil)
+### Slice::Client#get_shipment(id, params = nil, headers = nil)
 Get a particular shipment
 
-### Slice::Client#update_shipment(params = nil, headers = nil)
+### Slice::Client#update_shipment(id, params = nil, headers = nil)
 Update a particular shipment
 
-### Slice::Client#delete_shipment(params = nil, headers = nil)
+### Slice::Client#delete_shipment(id, params = nil, headers = nil)
 Delete a particular shipment
 
 ## 'Merchants' Resources
-### Slice::Client#get_merchant(params = nil, headers = nil)
+### Slice::Client#get_merchant(id, params = nil, headers = nil)
 Get a particular merchant
 
 ## 'Recalls' Resources
 ### Slice::Client#list_recalls(params = nil, headers = nil)
 List recalls for the user
 
-### Slice::Client#get_recall(params = nil, headers = nil)
+### Slice::Client#get_recall(id, params = nil, headers = nil)
 Get a particular recall for the user
 
 ## 'Email' Resources
-### Slice::Client#get_email(params = nil, headers = nil)
+### Slice::Client#get_email(id, params = nil, headers = nil)
 Get a particular email
 
-### Slice::Client#get_email(params = nil, headers = nil)
-Get a particular email
+### Slice::Client#get_email(id, params = nil, headers = nil)
+Get a particular email content
 
 ## Dictionary (static) Resources
 ### Slice::Client#list_categories(params = nil, headers = nil)

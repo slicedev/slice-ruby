@@ -44,21 +44,21 @@ module Slice
       post("/api/v1/orders", params, headers)
     end
 
-    # ### Slice::Client#get_order(params = nil, headers = nil)
+    # ### Slice::Client#get_order(id, params = nil, headers = nil)
     # Get a particular order
     #
     def get_order(id, params = nil, headers = nil)
       get("/api/v1/orders/#{id}", params, headers)
     end
 
-    # ### Slice::Client#update_order(params = nil, headers = nil)
+    # ### Slice::Client#update_order(id, params = nil, headers = nil)
     # Update a particular order
     #
     def update_order(id, params = nil, headers = nil)
       put("/api/v1/orders/#{id}", params, headers)
     end
 
-    # ### Slice::Client#delete_order(params = nil, headers = nil)
+    # ### Slice::Client#delete_order(id, params = nil, headers = nil)
     # Delete a particular order
     #
     def delete_order(id, params = nil, headers = nil)
@@ -81,21 +81,21 @@ module Slice
       post("/api/v1/items", params, headers)
     end
 
-    # ### Slice::Client#get_item(params = nil, headers = nil)
+    # ### Slice::Client#get_item(id, params = nil, headers = nil)
     # Get a particular item
     #
     def get_item(id, params = nil, headers = nil)
       get("/api/v1/items/#{id}", params, headers)
     end
 
-    # ### Slice::Client#update_item(params = nil, headers = nil)
+    # ### Slice::Client#update_item(id, params = nil, headers = nil)
     # Update a particular item
     #
     def update_item(id, params = nil, headers = nil)
       put("/api/v1/items/#{id}", params, headers)
     end
 
-    # ### Slice::Client#delete_item(params = nil, headers = nil)
+    # ### Slice::Client#delete_item(id, params = nil, headers = nil)
     # Delete a particular item
     #
     def delete_item(id, params = nil, headers = nil)
@@ -119,21 +119,21 @@ module Slice
       post("/api/v1/shipments", params, headers)
     end
 
-    # ### Slice::Client#get_shipment(params = nil, headers = nil)
+    # ### Slice::Client#get_shipment(id, params = nil, headers = nil)
     # Get a particular shipment
     #
     def get_shipment(id, params = nil, headers = nil)
       get("/api/v1/shipments/#{id}", params, headers)
     end
 
-    # ### Slice::Client#update_shipment(params = nil, headers = nil)
+    # ### Slice::Client#update_shipment(id, params = nil, headers = nil)
     # Update a particular shipment
     #
     def update_shipment(id, params = nil, headers = nil)
       put("/api/v1/shipments/#{id}", params, headers)
     end
 
-    # ### Slice::Client#delete_shipment(params = nil, headers = nil)
+    # ### Slice::Client#delete_shipment(id, params = nil, headers = nil)
     # Delete a particular shipment
     #
     def delete_shipment(id, params = nil, headers = nil)
@@ -143,7 +143,7 @@ module Slice
 
     # ## 'Merchants' Resources
 
-    # ### Slice::Client#get_merchant(params = nil, headers = nil)
+    # ### Slice::Client#get_merchant(id, params = nil, headers = nil)
     # Get a particular merchant
     #
     def get_merchant(id, params = nil, headers = nil)
@@ -160,7 +160,7 @@ module Slice
       get("/api/v1/recalls", params, headers)
     end
 
-    # ### Slice::Client#get_recall(params = nil, headers = nil)
+    # ### Slice::Client#get_recall(id, params = nil, headers = nil)
     # Get a particular recall for the user
     #
     def get_recall(id, params = nil, headers = nil)
@@ -170,15 +170,15 @@ module Slice
 
     # ## 'Email' Resources
 
-    # ### Slice::Client#get_email(params = nil, headers = nil)
+    # ### Slice::Client#get_email(id, params = nil, headers = nil)
     # Get a particular email
     #
     def get_email(id, params = nil, headers = nil)
       get("/api/v1/emails/#{id}", params, headers)
     end
 
-    # ### Slice::Client#get_email(params = nil, headers = nil)
-    # Get a particular email
+    # ### Slice::Client#get_email(id, params = nil, headers = nil)
+    # Get a particular email content
     #
     def get_email_content(id, params = nil, headers = nil)
       get("/api/v1/emails/#{id}/content", params, headers)
