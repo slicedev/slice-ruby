@@ -10,7 +10,7 @@ Install via Rubygems
 
 ... or add to your Gemfile
 
-`gem "slice-ruby"`
+`gem "slice-ruby", "~> 0.0.1"`
 
 ## Sample Usage
 
